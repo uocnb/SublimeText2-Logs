@@ -9,9 +9,9 @@ Overview
 
 Log files colorize.
 
-- Currently support:
-.. _dmesg
-.. _logcat
+### Currently support:
+- dmesg
+- logcat
 
 The Problem
 ===========
