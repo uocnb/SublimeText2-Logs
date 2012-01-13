@@ -1,0 +1,32 @@
+{ "name": "logcat",
+  "scopeName": "text.logcat", 
+  "fileTypes": [""], 
+  "firstLineMatch": "^[IWDE]/",
+  "patterns": [
+    { "match": "^I/\\w+",
+      "name": "entity.name.text.logcat",
+      "comment": "Information"
+    },
+    { "match": "^W/\\w+",
+      "name": "constant.support.text.logcat",
+      "comment": "Warning"
+    },
+    { "match": "^D/\\w+",
+      "name": "support.function.text.logcat",
+      "comment": "Debug"
+    },
+    { "match": "^E/\\w+|error(\\scode\\s+=\\s+\\d+)*|(\\w)*Exception|at\\s+|.err|died|denied",
+      "name": "keyword.text.logcat",
+      "comment": "Error"
+    },
+    { "match": "\\(\\s*\\d+\\)",
+      "name": "storage.modifier.text.logcat",
+      "comment": "No"
+    },
+    { "match": "Initializing|Registered|Ignoring|Disabling|mapping|Setting",
+      "name": "constant.support.text.logcat",
+      "comment": "Action"
+    }
+  ],
+  "uuid": "d5cfeeec-a040-454b-ba47-6a08db263ac6"
+}

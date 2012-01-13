@@ -1,0 +1,32 @@
+{ "name": "dmesg",
+  "scopeName": "text.dmesg", 
+  "fileTypes": [""], 
+  "firstLineMatch": "^(\\<\\d\\>)?\\[\\s*[\\d.]+\\]\\s+Initializing",
+  "patterns": [
+    { "match": "^(\\<\\d\\>)?\\[\\s*[\\d.]+\\]",
+      "name": "entity.name.text.dmesg",
+      "comment": "No"
+    },
+    { "match": "[Ff]ailed|[Ii]nvalid|[Ee]rror|[Ww]rong|WARN|ERROR",
+      "name": "keyword.text.dmesg",
+      "comment": "Error"
+    },
+    { "match": "BIOS|EFI|[Mm]em[^\\s]*|ACPI|pci[^\\s]*|PCI|RAM|[Bb]oot[^\\s]*|GPIO[^\\s]*|CPU|TCP|NET|PPP|Bluetooth|ehci[^\\s]*|(([u]sb)|USB)[^\\s]*|[Hh]ub|[Ii]nput[^\\s]*|system|[Dd]evice[^\\s]*|yaffs|[Ii]nit[^\\s]*",
+      "name": "string.text.dmesg",
+      "comment": "Important"
+    },
+    { "match": "FIXME|0x",
+      "name": "support.function.text.dmesg",
+      "comment": "Note"
+    },
+    { "match": "Initializing|Registered|Ignoring|Disabling|mapping",
+      "name": "constant.support.text.dmesg",
+      "comment": "Action"
+    },
+    { "match": "[\\dabcdefABCDEF]{16}|\\d{4}:\\d{2}:[\\dabcdefABCDEF]{2}.\\d:|-?[\\dabcdefABCDEF]{4,16}|(?<=(0x))[\\dabcdefABCDEF]+",
+      "name": "constant.numberic.text.dmesg",
+      "comment": "Number"
+    }
+  ],
+  "uuid": "2345756b-e633-4233-9772-d5c73f7ef27e"
+}
