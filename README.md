@@ -7,7 +7,11 @@ status: stable
 Overview
 ========
 
-Log files colorize for dmesg & logcat file
+Log files colorize.
+
+Currently support:
+- dmesg
+- logcat
 
 The Problem
 ===========
