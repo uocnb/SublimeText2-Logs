@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>log</string>
+	</array>
+	<key>name</key>
+	<string>Apache error log</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>IP address</string>
+			<key>match</key>
+			<string>(\d{1,3}\.){3}\d{1,3}</string>
+			<key>name</key>
+			<string>entity.name.text.apache-error</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Error</string>
+			<key>match</key>
+			<string>error|warn</string>
+			<key>name</key>
+			<string>keyword.text.apache-error</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Important</string>
+			<key>match</key>
+			<string>PHP (Fatal error|Warning|Notice)</string>
+			<key>name</key>
+			<string>string.text.apache-error</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Note</string>
+			<key>match</key>
+			<string>on line \d+|referer:|^\[[a-zA-Z :0-9]+\]</string>
+			<key>name</key>
+			<string>support.function.text.apache-error</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Action</string>
+			<key>match</key>
+			<string>Initializing|Registered|Ignoring|Disabling|mapping</string>
+			<key>name</key>
+			<string>constant.support.text.apache-error</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.apache-error</string>
+	<key>uuid</key>
+	<string>2345756b-e633-4233-9772-d5c73f7ef27e</string>
+</dict>
+</plist>
