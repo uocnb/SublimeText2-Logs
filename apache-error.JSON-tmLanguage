@@ -1,0 +1,27 @@
+{ "name": "Apache error log",
+  "scopeName": "text.apache-error",
+  "fileTypes": ["log"],
+  "patterns": [
+    { "match": "(\\d{1,3}\\.){3}\\d{1,3}",
+      "name": "entity.name.text.apache-error",
+      "comment": "IP address"
+    },
+    { "match": "error|warn",
+      "name": "keyword.text.apache-error",
+      "comment": "Error"
+    },
+    { "match": "PHP (Fatal error|Warning|Notice)",
+      "name": "string.text.apache-error",
+      "comment": "Important"
+    },
+    { "match": "on line \\d+|referer:|^\\[[a-zA-Z :0-9]+\\]",
+      "name": "support.function.text.apache-error",
+      "comment": "Note"
+    },
+    { "match": "Initializing|Registered|Ignoring|Disabling|mapping",
+      "name": "constant.support.text.apache-error",
+      "comment": "Action"
+    }
+  ],
+  "uuid": "2345756b-e633-4233-9772-d5c73f7ef27e"
+}
